@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Captain Harry</title>
+
+	      <script src="bootstrap/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="bootstrap/popper.js/popper.min.js" type="text/javascript"></script>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+				<script src="https://kit.fontawesome.com/6c0bd9c8d7.js"></script>
+				<script>
+
+				const games = ["PUBG...", "Rainbow 6", "CSGO...","Apex Legend"];
+				let i = 0;
+				let timer;
+
+				function typingEffect() {
+					let game = games[i].split("");
+					var loopTyping = function() {
+						if (game.length > 0) {
+							document.getElementById('game').innerHTML += game.shift();
+						} else {
+							deletingEffect();
+							return false;
+						};
+						timer = setTimeout(loopTyping, 200);
+					};
+					loopTyping();
+				};
+
+				function deletingEffect() {
+					let game = games[i].split("");
+					var loopDeleting = function() {
+						if (game.length > 0) {
+							game.pop();
+							document.getElementById('game').innerHTML = game.join("");
+						} else {
+							if (games.length > (i + 1)) {
+								i++;
+							} else {
+								i = 0;
+							};
+							typingEffect();
+							return false;
+						};
+						timer = setTimeout(loopDeleting, 90);
+					};
+					loopDeleting();
+				};
+
+				typingEffect();
+
+				</script>
+
+</head>
+  <body class="body-color"  onload="typingEffect()" >
+
+    <div class="container-fluid">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+				<div class="row">
+
+					<div class="col-1">
+
+					</div>
+					<div class="col-10">
+						<h1 class="myfont"> Hello World </h1>
+					</div>
+					<div class="col-1">
+
+					</div>
+
+				</div>
+
+				<br>
+				<br>
+
+				<div class="row">
+
+					<div class="col-1">
+
+					</div>
+					<div class="col-10">
+						<h1 class="hansolo">I am HanSolo (Captain Harry) <i class="far fa-smile-wink"></i></h1>
+					</div>
+					<div class="col-1">
+
+					</div>
+
+				</div>
+
+				<br>
+				<br>
+				<br>
+
+				<div class="row">
+
+					<div class="col-1">
+
+					</div>
+					<div class="col-10">
+						<div class="row">
+
+						<div class="col-2">
+					  </div>
+
+						<div class="col-4">
+							<h1 class="myfont1" >I play </h1>
+						</div>
+
+						<div class="col-6">
+							<h1 class="myfont2" id="game"></h1>
+						</div>
+
+					</div>
+					</div>
+
+					<div class="col-1">
+					</div>
+
+				</div>
+
+				<br>
+				<br>
+				<br>
+
+				<div class="row">
+
+					<div class="col-1">
+
+					</div>
+					<div class="col-10">
+						<h1 class="undergraduate">{ Undergraduate Software Engineer  <i class="far fa-meh-rolling-eyes"></i>}</h1>
+					</div>
+					<div class="col-1">
+
+					</div>
+
+				</div>
+
+    </div>
+
+  </body>
+</html>

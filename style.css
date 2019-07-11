@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+.body-color{
+  background-image: linear-gradient( 181.2deg,  rgba(181,239,249,1) 10.5%, rgba(254,254,254,1) 86.8% );
+  width: 100%;
+  height:800px;
+  background-repeat: no-repeat;
+}
+
+.myfont{
+  font-size: 100px;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: center;
+  color: #00aaff;
+}
+
+.hansolo{
+  font-size: 100px;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: center;
+  color: #33bbff;
+}
+
+.myfont1{
+  font-size: 75px;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: right;
+  color: #1ab2ff;
+
+}
+
+.myfont2{
+  font-size: 75px;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: left;
+  color: #1ab2ff;
+}
+
+.undergraduate{
+  font-size: 40px;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: center;
+  color: #1ab2ff;
+}
+
+
+
+#app {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+strong {
+  font-weight: 700;
+}
